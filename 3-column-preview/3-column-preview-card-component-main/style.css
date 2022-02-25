@@ -32,6 +32,10 @@ p, button {
     font-family: 'Lexend Deca', sans-serif;
 }
 
+p {
+    line-height: 2;
+}
+
 button {
     margin-top: 50px;
     width: 130px;
@@ -64,4 +68,25 @@ button {
 .third-section {
     background-color: var(--dark-cyan);
     padding: 30px;
+}
+
+@media only screen and (max-width: 604px) {
+
+    img {
+        margin-top: 20px;
+    }
+
+    h1 {
+        margin-bottom: 50px;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        margin: 20px;
+    }
+
+    .first-section {
+        border-radius: 20px 20px 0 0;
+    }
 }
