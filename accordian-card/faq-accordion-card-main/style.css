@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
 :root {
   --softRed: hsl(14, 88%, 65%);
   --veryDarkGrayBlue: hsl(237, 12%, 33%);
@@ -34,6 +36,7 @@ body {
   display: grid;
   grid-template-columns: 400px 1fr;
   grid-gap: 6rem;
+  background-image: url(./images/bg-pattern-desktop.svg);
   background-repeat: no-repeat;
   background-position: 1260% 65%;
 }
@@ -102,6 +105,7 @@ body {
 }
 
 .image__wrapper_inner {
+  background: url(./images/illustration-woman-online-desktop.svg);
   height: 100%;
   background-repeat: no-repeat;
   background-position: 120% center;
@@ -109,7 +113,7 @@ body {
 
 .box {
   position: absolute;
-  top: 10%;
+  top: 42%;
   left: -25%;
 }
 
@@ -138,10 +142,10 @@ body {
     top: -129%;
   }
   .box {
-    width: 300px;
-    left: 10px;
-    bottom: 50px;
-}
+    width: 55px;
+    left: 19%;
+    top: -30%;
+  }
   .accordion__wrapper {
     margin-top: 0px;
   }
@@ -152,4 +156,5 @@ body {
     text-align: center;
   }
 }
+
 
