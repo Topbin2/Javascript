@@ -33,7 +33,7 @@ body {
 }
 
 .main-text {
-    padding: 40px 40px 0 40px;
+    padding: 40px 40px 40px 40px;
     color: var(--dark-gray-blue);
 }
 
@@ -42,12 +42,12 @@ body {
     color: var(--dark-blue);
 }
 
-.main-footer {
+.main-footer-on {
     position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 40px 40px 20px 40px;
+    padding: 0 40px 20px 40px;
 }
 
 .avatar {
@@ -57,7 +57,6 @@ body {
 
 .main-footer-text {
     position: absolute;
-    top: 45px;
     left: 100px;
 }
 
@@ -67,5 +66,21 @@ body {
     padding: 10px;
     background-color: var(--light-gray-blue);
     border-radius: 50%;
+}
+
+.main-footer-off {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px 20px 40px;
+    font-size: 18px;
+    background-color: var(--dark-gray-blue);
+    border-radius: 0 0 10px 10px;
+    display: none;
+}
+
+footer img {
+    width: 30px;
+    height: 30px; 
 }
 
