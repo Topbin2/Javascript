@@ -10,11 +10,18 @@ buttonOn.addEventListener('click', () => {
     footerOn.style.display = 'none';
     footerOff.style.display = 'flex';
     }
-})
+});
 
 buttonOff.addEventListener('click', ()=> {
     if (window.innerWidth < 700) {
     footerOff.style.display = 'none';
     footerOn.style.display = 'flex';
     }
-})
+});
+
+buttonOn.addEventListener('click', ()=> {
+    if (window.innerWidth > 700) {
+        footerOff.classList.toggle('active');
+    }
+});
+

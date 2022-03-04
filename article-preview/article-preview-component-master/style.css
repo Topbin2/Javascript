@@ -21,9 +21,6 @@ body {
     background-color: var(--light-gray-blue);
 }
 
-.container {
-    margin-top: 50%;
-}
 
 .top-img img {
     width: 100%;
@@ -85,8 +82,8 @@ body {
 
 @media only screen and (min-width: 700px) {
     .container {
+        max-width: 800px;
         display: flex;
-        margin-top: 50%;
     }
 
     .top-img img {
@@ -94,10 +91,21 @@ body {
     }
 
     .main {
+        position: relative;
         border-radius: 0 10px 10px 0;
     }
 
     .main-footer-off {
-        border-radius: 0 0 10px 0;
+        width: 300px;
+        height: 60px;
+        position: absolute;
+        top: 150px;
+        left: 250px;
+        border-radius: 10px 10px 10px 10px;
+        display: none;
+    }
+
+    .active {
+        display: flex;
     }
 }
