@@ -66,4 +66,53 @@ body {
     line-height: 2;
 }
 
+.form-container {
+    position: relative;
+}
+
+.form-container input {
+    padding: 20px;
+    width: 80%;
+    height: 50px;
+    border: 1px solid var(--red-light);
+    border-radius: 30px;
+    color: var(--red-light);
+}
+
+.form-container button {
+    position: absolute;
+    top: 0;
+    right: 150px;
+    width: 100px;
+    height: 50px;
+    background: linear-gradient(90deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    border: 0;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+input::placeholder {
+    color: var(--red-light);
+}
+
+input:focus {
+    outline: none;
+}
+
+.icon-error {
+    position: absolute;
+    top: 12px;
+    right: 280px;
+    z-index: 1;
+    display: none;
+}
+
+.text-error {
+    font-size: 13px;
+    color: var(--red) !important;
+    margin: 10px !important;
+}
+
+
+
 
