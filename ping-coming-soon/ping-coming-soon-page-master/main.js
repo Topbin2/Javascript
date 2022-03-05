@@ -10,6 +10,7 @@ submit.addEventListener('click', (e)=> {
     const value = inputEmail.value;
     if (!value.match(regExp)) {
         addErrorText();
+        changeBorderColor();
     }
 })
 
@@ -20,3 +21,6 @@ function addErrorText() {
     form.appendChild(errorText);
 }
 
+function changeBorderColor() {
+    inputEmail.style.borderColor = 'var(--red)';
+}
