@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --red: hsl(0, 93%, 68%);
+    --red-light: hsl(0, 36%, 70%);
+    --dark: hsl(0, 6%, 24%);
+}
+
+body {
+    background-image: url(./images/bg-pattern-desktop.svg);
+    background-position: center;
+    background-size: cover;
+    font-size: 16px;
+    font-family: 'Josefin Sans', sans-serif;
+    height: 100vh;
+}
+
+.header {
+    display: inline-flex;
+    margin: 50px 100px;
+    max-width: 55%;
+    height: auto;
+}
+
+.img-container {
+    float: right;
+}
+
+.img-container img {
+    height: 100vh;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    margin: 50px 100px;
+}
+
+.sub-container {
+    padding: 0 150px 0 0;
+}
+
+.sub-container h1 {
+    font-size: 80px;
+    line-height: 1.2;
+    letter-spacing: 25px;
+}
+
+.text-color {
+    color: var(--red-light);
+}
+
+.sub-container h1 span {
+    display: block;
+}
+
+.sub-container p {
+    color: var(--red-light);
+    margin: 30px 0;
+    line-height: 2;
+}
+
+.form-container {
+    position: relative;
+}
+
+.form-container input {
+    padding: 20px;
+    width: 100%;
+    height: 50px;
+    border: 1px solid var(--red-light);
+    border-radius: 30px;
+    color: var(--red-light);
+}
+
+.form-container button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100px;
+    height: 50px;
+    background: linear-gradient(90deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    border: 0;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+input::placeholder {
+    color: var(--red-light);
+}
+
+input:focus {
+    outline: none;
+}
+
+.icon-error {
+    position: absolute;
+    top: 12px;
+    right: 280px;
+    z-index: 1;
+    display: none;
+}
+
+.text-error {
+    font-size: 13px;
+    color: var(--red) !important;
+    margin: 10px !important;
+}
+
+@media screen and (max-width: 1400px) {
+    .img-container {
+        display: block;
+        width: 100%;
+    }
+
+    .main-container {
+        display: block;
+        width: 600px;
+        margin: 30px 0;
+    }
+}
+
+
+
+

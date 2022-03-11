@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --magenta: hsl(300, 43%, 22%);
+    --pink: hsl(333, 80%, 67%);
+    --gray-magenta: hsl(303, 10%, 53%);
+    --light-magenta: hsl(300, 24%, 96%);
+    --white: hsl(0, 0%, 100%);
+}
+
+body {
+    font-size: 15px;
+    font-family: 'Spartan', sans-serif;
+    background-image: 
+    url('./images/bg-pattern-top-desktop.svg'),
+    url('./images/bg-pattern-bottom-desktop.svg');
+    background-repeat: no-repeat;
+    background-size: 50% 50%, 100% 100%;
+    height: 100vh;
+    text-align: center;
+}
+
+.top-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 200px 100px;
+    text-align: left;
+}
+
+.top-container h1 {
+    font-size: 70px;
+    color: var(--magenta);
+}
+
+.top-container p {
+    font-size: 20px;
+    line-height: 2;
+    margin-top: 20px;
+    color: var(--gray-magenta);
+}
+
+.review-stars-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    width: 50%;
+}
+
+.review-stars {
+    display: flex;
+    align-items: center;
+    background-color: var(--light-magenta);
+    width: 70%;
+    height: 20%;
+    margin: 12px;
+    padding-left: 40px;
+    border-radius: 10px;
+}
+
+.review-stars img {
+    margin: 5px;
+    width: 20px;
+    height: 20px;
+}
+
+.review-stars span {
+    padding-left: 40px;
+    font-weight: 600;
+    color: var(--magenta);
+}
+
+.review-stars-container .second {
+    transform: translateX(10%);
+}
+
+.review-stars-container .third {
+    transform: translateX(20%);
+}
+
+.bottom-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 100px;
+}
+
+.review-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 30px;
+    width: 30%;
+    height: 300px;
+    background-color: var(--magenta);
+    border-radius: 10px;
+    color: var(--white);
+}
+
+.review-information {
+    display: flex;
+}
+
+.review-information img {
+    border-radius: 50%;
+    margin: 0 20px;
+    width: 60px;
+    height: 60px;
+}
+
+.review-name {
+    text-align: left;
+    line-height: 2;
+    font-weight: 500;
+}
+
+.review-name .color-red {
+    color: var(--pink);
+}
+
+.review-text {
+    line-height: 2;
+    text-align: left;
+    margin: 0 20px;
+}
+
+.bottom-container .second {
+    transform: translateY(10%);
+}
+
+.bottom-container .third{
+    transform: translateY(20%);
+}

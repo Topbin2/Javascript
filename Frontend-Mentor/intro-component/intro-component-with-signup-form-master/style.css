@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+   --red: hsl(0, 100%, 74%);
+   --green: hsl(154, 59%, 51%);
+   --blue: hsl(248, 32%, 49%);
+   --dark-blue: hsl(249, 10%, 26%);
+   --gray-blue: hsl(246, 25%, 77%);
+}
+
+body {
+  background: url("./images/bg-intro-mobile.png"), var(--red);
+  background-position: center;
+  background-repeat: repeat;
+  font-size: 1em;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+}
+
+.text-container h1 {
+    margin: 100px 40px 20px 40px;
+    font-size: 40px;
+    color: white;
+}
+
+.text-container p {
+    margin: 40px 30px;
+    font-size: 20px;
+    color: whitesmoke;
+}
+
+.main-container {
+    padding: 30px;
+}
+
+.text-middle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    height: 100px;
+    color: white;
+    background-color: var(--blue);
+    border-radius: 10px;
+    line-height: 2;
+    box-shadow: 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.sign-up {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+
+}
+
+.sign-up input {
+    margin-bottom: 25px;
+    padding: 20px;
+    height: 60px;
+    border: 1px solid var(--gray-blue);
+    border-radius: 10px;
+}
+
+input[type="submit"] {
+    text-transform: uppercase;
+    font-size: 18px;
+    color: white;
+    background-color: var(--green);
+    cursor: pointer;
+    border: 0;
+}
+
+.text-bottom {
+    padding: 0 15px;
+    font-size: 14px;
+    color: var(--gray-blue);
+}
+
+.text-bottom span {
+    color: var(--red);
+}
+
