@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: black;
+        }
+
+        .box {
+            background-color: yellow;
+            width: 200px;
+            height: 200px;   
+            margin: 20px;
+        }
+
+        .box1 {
+            background-color: red;
+        }
+
+        .button-container {
+            position: fixed;
+            top: 30px;
+            right: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box box1"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+
+    <div class="button-container">
+        <button class="button-scrollBy">Scroll by 100px(y)</button>
+        <button class="button-scrollTo">Scroll to 100px(y)</button>
+        <button class="button-scrollIntoRedBox">scroll into red box</button>
+    </div>
+    <script>
+        const box = document.querySelector('.box1');
+        
+        box.addEventListener('click', event => {
+            const rect = box.getBoundingClientRect();
+            console.log(rect);
+            console.log(`clientX : ${event.clientX}, clientY: ${event.clientY}`);
+            console.log(`pageX : ${event.pageX}, pageY: ${event.pageY}`);
+        });
+
+        const scrollBy = document.querySelector('.button-scrollBy');
+        const scrollTo = document.querySelector('.button-scrollTo');
+        const scrollInto = document.querySelector('.button-scrollIntoRedBox');
+
+        scrollBy.addEventListener('click', () => {
+            window.scrollBy(0, 100);
+        });
+
+        scrollTo.addEventListener('click', () => {
+            window.scrollBy(0, -100);
+        });
+
+        scrollInto.addEventListener('click', ()=> {
+            box.scrollIntoView({ behavior: "smooth", block: "center"});
+        });
+    </script>
+
+</body>
+</html>
