@@ -18,6 +18,53 @@ body {
     font-size: 100px;
 }
 
-.form-name {
-    
+.name{
+    font-size: 40px;
+    margin: 50px 0;
+    text-align: center;
+}
+
+.name-input {
+    margin: 50px;
+    padding: 50px;
+    height: 50px;
+    background-color: black;
+    color: white;
+    font-size: 50px;
+    border: solid white;
+    outline: 0;
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+
+.todo-input {
+    margin: 20px;
+    padding: 50px;
+    height: 50px;
+    background-color: black;
+    color: white;
+    font-size: 50px;
+    border: solid white;
+    outline: 0;
+    text-align: center;
+}
+
+.todo-list li {
+    margin: 30px;
+    font-size: 40px;
+    text-align: center;
+    list-style: none;
+}
+
+.todo-list li button {
+    font-size: 50px;
+    margin: 10px;
+    color: Red;
+    background-color: black;
+    border: none;
+    cursor: pointer;
 }
