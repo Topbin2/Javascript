@@ -1,5 +1,11 @@
 "usestrict";
 
+//change imoticon
+const imoticon = document.querySelector('.imoticon');
+const arr = ['😍', '😘', '😝', '🤩'];
+
+
+
 //set time
 const hours = document.querySelector(".hours");
 const minutes = document.querySelector(".minutes");
@@ -69,8 +75,13 @@ todoSubmit.addEventListener("submit", (e) => {
 //weather APIs
 function onGeoOk(position) {
     const lat = position.coords.latitude;
-    const lng = position.coords.longitude;
-    console.log(lat, lng);
+    const lon = position.coords.longitude;
+    const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=f41b39cbcc6ab04727e628ea8b626de7&units=metric`
+    fetch(url).then(response => response.json()).then(data => {
+        const name = data.name;
+        const position = document.querySelector('.weather-position');
+        position.innerText = name;
+    });
 }
 
 function onGeoError() {
