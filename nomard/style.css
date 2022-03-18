@@ -54,7 +54,6 @@ body {
 }
 
 .todo-list li {
-    margin: 30px;
     font-size: 40px;
     text-align: center;
     list-style: none;
