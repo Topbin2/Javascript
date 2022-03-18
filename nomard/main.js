@@ -4,6 +4,12 @@
 const imoticon = document.querySelector('.imoticon');
 const arr = ['😍', '😘', '😝', '🤩'];
 
+function changeItc() {
+    const randomNum = Math.floor(Math.random() * arr.length);
+    imoticon.innerText = arr[randomNum];
+}
+
+setInterval(changeItc, 1000);
 
 
 //set time
