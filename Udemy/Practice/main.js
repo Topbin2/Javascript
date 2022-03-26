@@ -28,9 +28,34 @@
 // .then( res => console.log(res.data) )
 // .catch( err => console.log('err') )
 
-async function fetchApi() {
-    const response = await axios.get("https://www.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=25&key=AIzaSyDhEeHaM-lrpgIYTkseTk-eiB9kp9X4-qg");
-    console.log(response.data);
+// async function fetchApi() {
+//     const response = await axios.get("https://www.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=25&key=AIzaSyDhEeHaM-lrpgIYTkseTk-eiB9kp9X4-qg");
+//     console.log(response.data);
+// }
+
+// fetchApi();
+const jokes = document.querySelector('#jokes');
+const button = document.querySelector('button');
+
+async function getJoke() {
+    try {
+    const config = { headers: {Accept: 'application/json'} };
+    const response = await axios.get("https://icanhazdadjoke.com/", config);
+    return response.data.joke;
+    } catch {
+        console.log('error!');
+    }
+    
 }
 
-fetchApi();
+const addNewJoke = async () => {
+    const jokeText = await getJoke();
+    console.log(jokeText);
+    const newLi = document.createElement('li');
+    newLi.innerHTML = jokeText;
+    jokes.appendChild(newLi);
+}
+
+
+button.addEventListener('click', addNewJoke);
+
