@@ -1,9 +1,4 @@
-function add(n1: number, n2: number) {
-    return n1 + n2;
-}
-
-function printResult(num: number): void {
-    console.log('Result: ' + num);
-}
-
-printResult(add(5, 12));
+const username = 'sangbi1121212313n';
+const yourname = 'kong';
+console.log(yourname);
+console.log(username);
