@@ -1,5 +1,5 @@
-const button = document.querySelector('button')!;
+const hobbies = ['Sports', 'Cooking'];
+const activeHobbies = ['Hiking'];
 
-button.addEventListener('click', () => {
-    console.log('click!');
-});
+activeHobbies.push(...hobbies);
+console.log(activeHobbies);
