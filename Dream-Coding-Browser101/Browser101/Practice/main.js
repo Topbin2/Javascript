@@ -1,41 +1,50 @@
 const input = document.querySelector("input");
 const addBtn = document.querySelector("#add__button");
 const list = document.querySelector("ul");
-const removeBtn = document.querySelectorAll('.remove__button');
+const removeBtn = document.querySelectorAll(".remove__button");
 
-function clearInput() {
-  input.value = '';
+function onAdd() {
+  const text = input.value;
+  if (text.trim() === "") return;
+  const item = createItem(text);
+  list.appendChild(item);
+  input.value = "";
+  input.focus();
+}
+
+function createItem(text) {
+  const container = document.createElement("li");
+  container.innerHTML = `
+  <span>${text}</span>
+  <button class="remove__button">X</button>
+  `;
+  // const name = document.createElement("span");
+  // const removeBtn = document.createElement("button");
+
+  // name.textContent = text;
+  // removeBtn.textContent = "X";
+  // removeBtn.addEventListener('click', () => {
+  //   container.remove();
+  // })
+
+  // container.appendChild(name);
+  // container.appendChild(removeBtn);
+
+  return container;
 }
 
 addBtn.addEventListener("click", () => {
-  const li = document.createElement("li");
-  const span = document.createElement("span");
-  span.textContent = input.value;
-  const button = document.createElement("button");
-  button.textContent = "X";
-  li.appendChild(span);
-  li.appendChild(button);
-  list.appendChild(li);
-  clearInput();
-  input.focus();
+  onAdd();
 });
 
 input.addEventListener("keydown", (e) => {
   if (e.code === "Enter") {
-    const li = document.createElement("li");
-    const span = document.createElement("span");
-    span.textContent = input.value;
-    const button = document.createElement("button");
-    button.textContent = "X";
-    li.appendChild(span);
-    li.appendChild(button);
-    list.appendChild(li);
-    clearInput();
+    onAdd();
   }
 });
 
-removeBtn.forEach( btn => {
-  btn.addEventListener('click', e => {
-    console.log(e.target);
-  })
-})
+list.addEventListener("click", (e) => {
+  if (e.target.nodeName == "BUTTON") {
+    e.target.parentNode.remove();
+  }
+});
