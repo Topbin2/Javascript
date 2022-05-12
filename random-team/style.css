@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: black;
+  color: whitesmoke;
+}
+
+h1 {
+  margin-bottom: 3rem;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  padding: 1.5rem;
+  border: 1px solid white;
+}
+
+.shuffle-btn {
+  width: 30%;
+  height: 40px;
+  cursor: pointer;
+  transition: all 0.1s ease-in;
+}
+
+.shuffle-btn:hover {
+  transform: scale(1.1);
+}
+
+
+.text-container > p {
+  margin: 2rem 0;
+}
+
+.text-container > p > span {
+  color: 73777B;
+}
+
+.text-container > p > .name {
+  color: #EC994B;
+}
