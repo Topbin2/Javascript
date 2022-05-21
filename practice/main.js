@@ -1,12 +1,5 @@
-async function myAsyncFun() {
-  throw "asyncError!";
+function printMaxNums(...args) {
+  console.log(args)
 }
 
-function myPromiseFun() {
-  return new Promise((resolve, reject) => {
-    reject("promiseError");
-  });
-}
-
-const result = myAsyncFun().catch((e) => console.log(e));
-const result2 = myPromiseFun().catch((e) => console.log(e));
+console.log(printMaxNums(10, 30, 40));
