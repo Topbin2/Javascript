@@ -19,6 +19,10 @@
     Comment: <%= comment.comment %>
   </h1>
   <a href="/comments">Home</a>
+  <a href="/comments/<%=comment.id %>/edit ">Edit</a>
+  <form method="POST" action="/comments/<%=comment.id%>?_method=DELETE">
+    <button>DELETE</button>
+  </form>
 </body>
 
 </html>
